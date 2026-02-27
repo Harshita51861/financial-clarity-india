@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EMI Calculator India — Home Loan, Car Loan, Personal Loan</title>
+  <meta name="description" content="Calculate your EMI instantly for home loan, car loan, or personal loan. India-focused EMI calculator with total interest and payment breakdown. Free, no signup.">
+  <link rel="canonical" href="https://financialhealthscore.in/pages/emi-calculator.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the ideal EMI to income ratio in India?","acceptedAnswer":{"@type":"Answer","text":"Ideally your total EMIs should not exceed 30–40% of your monthly take-home income. Beyond 40%, you enter a high financial stress zone."}},{"@type":"Question","name":"How is EMI calculated?","acceptedAnswer":{"@type":"Answer","text":"EMI = P × r × (1+r)^n / ((1+r)^n - 1), where P is principal, r is monthly interest rate, and n is tenure in months."}}]}</script>
+</head>
+<body>
+<div class="mobile-nav"><button class="mobile-close">✕</button><a href="../index.html">Home</a><a href="calculator.html">Score Calculator</a><a href="emi-calculator.html">EMI Calculator</a><a href="sip-calculator.html">SIP Calculator</a><a href="../blog/index.html">Blog</a></div>
+<nav>
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo"><div class="logo-icon"><span>₹</span></div>Financial Health Score</a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a><a href="calculator.html">Health Score</a><a href="sip-calculator.html">SIP</a><a href="emergency-fund.html">Emergency Fund</a><a href="../blog/index.html">Blog</a>
+      <a href="calculator.html" class="nav-cta">My Score</a>
+    </div>
+    <button class="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="../index.html">Home</a> / EMI Calculator</div>
+    <h1>EMI Calculator</h1>
+    <p>Calculate your monthly loan instalment for home, car, or personal loans. Instant results — no signup required.</p>
+  </div>
+</section>
+
+<section class="calc-page">
+  <div class="container">
+    <div class="calc-wrap">
+      <div class="calc-form">
+        <h3 style="margin-bottom:24px;">Loan Details</h3>
+        <form id="emiForm" novalidate>
+          <div class="form-group">
+            <label for="emiPrincipal">Loan Amount (Principal)</label>
+            <div class="input-prefix"><span>₹</span><input type="number" id="emiPrincipal" placeholder="e.g. 2000000" min="1000" required></div>
+          </div>
+          <div class="form-group">
+            <label for="emiRate">Annual Interest Rate (%)</label>
+            <input type="number" id="emiRate" placeholder="e.g. 8.5" min="0.1" max="50" step="0.1" required>
+          </div>
+          <div class="form-group">
+            <label for="emiTenure">Loan Tenure (Months)</label>
+            <input type="number" id="emiTenure" placeholder="e.g. 240 (20 years)" min="1" max="360" required>
+          </div>
+          <button type="submit" class="calc-btn">Calculate EMI →</button>
+        </form>
+        <div style="margin-top:20px;padding:16px;background:var(--off-white);border-radius:8px;">
+          <p style="font-size:0.82rem;color:var(--gray-500);margin:0;"><strong>Common Tenures:</strong> Home Loan = 120–240 months | Car Loan = 36–84 months | Personal Loan = 12–60 months</p>
+        </div>
+      </div>
+
+      <div class="calc-results">
+        <h3 style="margin-bottom:24px;">Your EMI Breakdown</h3>
+        <div id="emiResult" class="metrics-list" style="display:none;"></div>
+        <div id="emiPlaceholder" class="placeholder-state"><div style="font-size:4rem;">🏦</div><p>Enter your loan details to calculate the monthly EMI.</p></div>
+
+        <div style="margin-top:28px;padding:20px;background:var(--off-white);border-radius:12px;">
+          <h4 style="color:var(--navy);margin-bottom:12px;">Is your EMI too high?</h4>
+          <p style="font-size:0.88rem;margin-bottom:12px;">Check your overall EMI burden as a percentage of income using our Financial Health Score tool.</p>
+          <a href="calculator.html" class="btn btn-primary" style="font-size:0.9rem;padding:10px 20px;">Check Financial Health Score →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<section class="section" style="background:var(--white);">
+  <div class="container" style="max-width:760px;">
+    <h2>Understanding EMI in India</h2>
+    <p>EMI (Equated Monthly Instalment) is the fixed monthly payment you make to repay a loan over its tenure. It consists of two components: the principal repayment and the interest charged. In the early months, a larger portion of your EMI goes toward interest. Over time, the principal component increases — this is called loan amortization.</p>
+
+    <h3 style="margin-top:2rem;">EMI Formula</h3>
+    <p>The standard EMI formula used by all Indian banks and NBFCs is:</p>
+    <div style="background:var(--off-white);padding:20px 24px;border-radius:10px;font-family:monospace;font-size:0.95rem;margin-bottom:1.5rem;border-left:4px solid var(--navy);">EMI = P × r × (1+r)^n / ((1+r)^n − 1)</div>
+    <p>Where P = Principal, r = Monthly Interest Rate (Annual Rate ÷ 12 ÷ 100), n = Tenure in months.</p>
+
+    <h3 style="margin-top:2rem;">How Much EMI Is Too Much?</h3>
+    <p>Financial planners in India recommend that your total monthly EMI obligations should not exceed <strong>30–40% of your monthly take-home salary</strong>. If you are paying more than 50% of your income as EMI, you are in serious financial stress territory.</p>
+    <p>For example, if your take-home salary is ₹60,000 per month, your total EMI burden across all loans should ideally be under ₹18,000–₹24,000.</p>
+
+    <h3 style="margin-top:2rem;">Tips to Reduce Your EMI Burden</h3>
+    <ul style="padding-left:24px;color:var(--gray-600);margin-bottom:1.2rem;">
+      <li>Make a larger down payment to reduce the principal loan amount</li>
+      <li>Choose a longer tenure — it lowers EMI but increases total interest paid</li>
+      <li>Prepay when you have surplus funds — even partial prepayment reduces tenure significantly</li>
+      <li>Refinance to a lower interest rate if your credit score has improved</li>
+      <li>Avoid multiple loans simultaneously — consolidate if possible</li>
+    </ul>
+  </div>
+</section>
+
+<section class="faq-section" style="background:var(--off-white);">
+  <div class="container">
+    <div class="section-header"><h2>EMI Calculator FAQs</h2></div>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q">What is the ideal EMI to income ratio in India? <span class="faq-arrow">▾</span></button><div class="faq-a">Your total EMIs should not exceed 30–40% of your monthly take-home income. Banks in India typically cap eligibility at 40–50% of gross income. Going beyond this significantly reduces your financial flexibility.</div></div>
+      <div class="faq-item"><button class="faq-q">Can I reduce my EMI without reducing loan amount? <span class="faq-arrow">▾</span></button><div class="faq-a">Yes. You can either negotiate a lower interest rate (possible if you have a good credit score or switch lenders) or increase the loan tenure. Both options reduce your monthly EMI, though longer tenure means more total interest paid.</div></div>
+      <div class="faq-item"><button class="faq-q">What happens if I miss an EMI payment? <span class="faq-arrow">▾</span></button><div class="faq-a">Missing an EMI attracts a penalty fee (typically 1–3% of the overdue amount), negatively impacts your CIBIL credit score, and can lead to loan default proceedings if missed repeatedly. Always maintain a buffer account for EMI payments.</div></div>
+      <div class="faq-item"><button class="faq-q">How does prepayment affect my EMI? <span class="faq-arrow">▾</span></button><div class="faq-a">Prepaying a lump sum reduces your outstanding principal. You can either choose to reduce your EMI amount (keeping tenure same) or reduce your tenure (keeping EMI same). Reducing tenure saves more interest in the long run.</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand"><div class="nav-logo" style="color:white;"><div class="logo-icon"><span>₹</span></div>Financial Health Score</div><p>Free India-focused financial calculators.</p></div>
+    <div class="footer-col"><h5>Calculators</h5><a href="calculator.html">Health Score</a><a href="emi-calculator.html">EMI</a><a href="sip-calculator.html">SIP</a><a href="emergency-fund.html">Emergency Fund</a></div>
+    <div class="footer-col"><h5>Company</h5><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="disclaimer.html">Disclaimer</a></div>
+    <div class="footer-col"><h5>Learn</h5><a href="../blog/index.html">Blog</a><a href="../blog/emi-warning-signs.html">EMI Warning Signs</a></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 Financial Health Score. Not financial advice.</p></div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script>
+  document.getElementById('emiForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    document.getElementById('emiPlaceholder').style.display = 'none';
+    document.getElementById('emiResult').style.display = 'flex';
+  });
+</script>
+</body>
+</html>

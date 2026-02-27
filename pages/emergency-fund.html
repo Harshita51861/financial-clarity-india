@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Fund Calculator India — How Much Should You Save?</title>
+  <meta name="description" content="Calculate exactly how much emergency fund you need and how long it will take to build it. Free India-specific emergency savings calculator.">
+  <link rel="canonical" href="https://financialhealthscore.in/pages/emergency-fund.html">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="mobile-nav"><button class="mobile-close">✕</button><a href="../index.html">Home</a><a href="calculator.html">Score Calculator</a><a href="emi-calculator.html">EMI</a><a href="sip-calculator.html">SIP</a><a href="../blog/index.html">Blog</a></div>
+<nav>
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo"><div class="logo-icon"><span>₹</span></div>Financial Health Score</a>
+    <div class="nav-links"><a href="../index.html">Home</a><a href="calculator.html">Health Score</a><a href="emi-calculator.html">EMI</a><a href="sip-calculator.html">SIP</a><a href="../blog/index.html">Blog</a><a href="calculator.html" class="nav-cta">My Score</a></div>
+    <button class="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="../index.html">Home</a> / Emergency Fund Calculator</div>
+    <h1>Emergency Fund Calculator</h1>
+    <p>Find out exactly how much you need in your emergency fund — and how quickly you can build it.</p>
+  </div>
+</section>
+
+<section class="calc-page">
+  <div class="container">
+    <div class="calc-wrap">
+      <div class="calc-form">
+        <h3 style="margin-bottom:24px;">Your Monthly Obligations</h3>
+        <form id="efForm" novalidate>
+          <div class="form-group">
+            <label for="efExpenses">Monthly Living Expenses</label>
+            <div class="input-prefix"><span>₹</span><input type="number" id="efExpenses" placeholder="e.g. 30000" min="0" required></div>
+          </div>
+          <div class="form-group">
+            <label for="efEmi">Monthly EMI Payments</label>
+            <div class="input-prefix"><span>₹</span><input type="number" id="efEmi" placeholder="e.g. 10000" min="0"></div>
+          </div>
+          <div class="form-group">
+            <label for="efSavings">Current Emergency Savings</label>
+            <div class="input-prefix"><span>₹</span><input type="number" id="efSavings" placeholder="e.g. 50000" min="0"></div>
+          </div>
+          <div class="form-group">
+            <label for="efMonths">Target Coverage (Months)</label>
+            <select id="efMonths">
+              <option value="3">3 Months (Minimum)</option>
+              <option value="6" selected>6 Months (Recommended)</option>
+              <option value="9">9 Months (Conservative)</option>
+              <option value="12">12 Months (Very Safe)</option>
+            </select>
+          </div>
+          <button type="submit" class="calc-btn">Calculate Emergency Fund →</button>
+        </form>
+      </div>
+      <div class="calc-results">
+        <h3 style="margin-bottom:24px;">Your Emergency Fund Analysis</h3>
+        <div id="efResult" class="metrics-list" style="display:none;"></div>
+        <div id="efPlaceholder" class="placeholder-state"><div style="font-size:4rem;">🛡️</div><p>Enter your expenses to calculate your emergency fund target.</p></div>
+        <div style="margin-top:28px;padding:20px;background:var(--off-white);border-radius:12px;">
+          <h4 style="color:var(--navy);margin-bottom:10px;">Where to Keep Your Emergency Fund?</h4>
+          <ul style="padding-left:20px;font-size:0.88rem;color:var(--gray-600);">
+            <li>High-interest savings account (3.5–4.5% p.a.)</li>
+            <li>Liquid mutual funds (6–7% p.a., instant redemption)</li>
+            <li>FD with sweep-in facility</li>
+            <li>Avoid: Fixed Deposits with lock-in, equities, real estate</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--white);">
+  <div class="container" style="max-width:760px;">
+    <h2>Why Your Emergency Fund Is Your Most Important Financial Asset</h2>
+    <p>Before investing in stocks, gold, or real estate, financial advisors universally recommend building an emergency fund. This is a cash reserve set aside specifically to cover unexpected expenses — job loss, medical emergencies, urgent home repairs, or any crisis that disrupts your regular income.</p>
+    <h3 style="margin-top:2rem;">How Much Emergency Fund Do You Need in India?</h3>
+    <p>The standard recommendation is 3–6 months of your total monthly obligations (expenses + EMIs). However, given India's relatively less robust social safety net compared to Western countries, financial planners often recommend 6–9 months for salaried employees and 9–12 months for self-employed or freelance workers.</p>
+    <p>If you have dependents, additional health risks, or a volatile income, lean toward the higher end of this range.</p>
+    <h3 style="margin-top:2rem;">How to Build an Emergency Fund in 6 Months</h3>
+    <ul style="padding-left:24px;color:var(--gray-600);">
+      <li>Calculate your target amount using this calculator</li>
+      <li>Open a separate savings account — don't mix with regular spending</li>
+      <li>Set up an auto-transfer on salary day</li>
+      <li>Direct all windfalls (bonus, tax refund, gifts) to this fund</li>
+      <li>Cut one non-essential subscription or expense temporarily</li>
+    </ul>
+  </div>
+</section>
+
+<section class="faq-section" style="background:var(--off-white);">
+  <div class="container">
+    <div class="section-header"><h2>Emergency Fund FAQs</h2></div>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q">Should I invest or build emergency fund first? <span class="faq-arrow">▾</span></button><div class="faq-a">Always build your emergency fund first. Investing without a safety net means you'll be forced to withdraw investments at a bad time during an emergency, often at a loss. Once your emergency fund is in place, redirect surplus to investments.</div></div>
+      <div class="faq-item"><button class="faq-q">Can I use my PPF as an emergency fund? <span class="faq-arrow">▾</span></button><div class="faq-a">No. PPF has a 15-year lock-in period with limited partial withdrawal only after year 7. It cannot be accessed quickly in a true emergency. Keep your emergency fund in liquid instruments — savings accounts or liquid mutual funds.</div></div>
+      <div class="faq-item"><button class="faq-q">What if I have a large outstanding loan — do I need an emergency fund too? <span class="faq-arrow">▾</span></button><div class="faq-a">Yes, absolutely. In fact, if you have loans (especially EMIs), an emergency fund is even more critical. Missing an EMI has severe consequences — penalty fees, credit score damage, and legal proceedings. Your emergency fund should cover your EMIs along with living expenses.</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand"><div class="nav-logo" style="color:white;"><div class="logo-icon"><span>₹</span></div>Financial Health Score</div><p>Free India-focused financial calculators.</p></div>
+    <div class="footer-col"><h5>Calculators</h5><a href="calculator.html">Health Score</a><a href="emi-calculator.html">EMI</a><a href="sip-calculator.html">SIP</a><a href="emergency-fund.html">Emergency Fund</a></div>
+    <div class="footer-col"><h5>Company</h5><a href="about.html">About</a><a href="privacy.html">Privacy</a><a href="disclaimer.html">Disclaimer</a></div>
+    <div class="footer-col"><h5>Learn</h5><a href="../blog/index.html">Blog</a><a href="../blog/emergency-fund-guide.html">Emergency Fund Guide</a></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 Financial Health Score. Not financial advice.</p></div>
+</footer>
+<script src="../js/main.js"></script>
+<script>
+  document.getElementById('efForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    document.getElementById('efPlaceholder').style.display = 'none';
+    document.getElementById('efResult').style.display = 'flex';
+  });
+</script>
+</body>
+</html>

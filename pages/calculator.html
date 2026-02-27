@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Health Score Calculator — Free India Finance Tool</title>
+  <meta name="description" content="Calculate your Financial Health Score for free. Get EMI burden, emergency fund coverage, debt-to-income ratio and personalised improvement tips.">
+  <link rel="canonical" href="https://financialhealthscore.in/pages/calculator.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org","@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"What is a good Financial Health Score?","acceptedAnswer":{"@type":"Answer","text":"A score of 70 or above is considered Low Risk. 40–69 is Moderate Risk, and below 40 is High Risk requiring immediate attention."}},
+      {"@type":"Question","name":"Is my financial data saved?","acceptedAnswer":{"@type":"Answer","text":"No. All calculations happen in your browser. No data is sent to any server or stored anywhere."}}
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<div class="mobile-nav">
+  <button class="mobile-close">✕</button>
+  <a href="../index.html">Home</a>
+  <a href="calculator.html">Score Calculator</a>
+  <a href="emi-calculator.html">EMI Calculator</a>
+  <a href="sip-calculator.html">SIP Calculator</a>
+  <a href="../blog/index.html">Blog</a>
+</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <div class="logo-icon"><span>₹</span></div>Financial Health Score
+    </a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="emi-calculator.html">EMI</a>
+      <a href="sip-calculator.html">SIP</a>
+      <a href="emergency-fund.html">Emergency Fund</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="calculator.html" class="nav-cta">My Score</a>
+    </div>
+    <button class="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="../index.html">Home</a> / Financial Health Score Calculator</div>
+    <h1>Financial Health Score Calculator</h1>
+    <p>Enter your financial details below to get your personalised 0–100 score with risk analysis and recommendations.</p>
+  </div>
+</section>
+
+<section class="calc-page">
+  <div class="container">
+    <div class="calc-wrap">
+
+      <!-- FORM -->
+      <div class="calc-form">
+        <h3 style="margin-bottom:24px;">Your Financial Details</h3>
+        <form id="calcForm" novalidate>
+          <div class="form-group">
+            <label for="income">Monthly Income (Take-Home) <span style="color:red;">*</span></label>
+            <div class="input-prefix"><span>₹</span><input type="number" id="income" placeholder="e.g. 75000" min="0"></div>
+            <div class="error-msg" id="income-err"></div>
+          </div>
+          <div class="form-group">
+            <label for="expenses">Monthly Expenses (excluding EMI) <span style="color:red;">*</span></label>
+            <div class="input-prefix"><span>₹</span><input type="number" id="expenses" placeholder="e.g. 35000" min="0"></div>
+            <div class="error-msg" id="expenses-err"></div>
+          </div>
+          <div class="form-group">
+            <label for="emi">Monthly EMI Payments</label>
+            <div class="input-prefix"><span>₹</span><input type="number" id="emi" placeholder="e.g. 12000" min="0"></div>
+          </div>
+          <div class="form-group">
+            <label for="savings">Total Current Savings / Liquid Assets</label>
+            <div class="input-prefix"><span>₹</span><input type="number" id="savings" placeholder="e.g. 150000" min="0"></div>
+          </div>
+          <div class="form-group">
+            <label for="loans">Total Outstanding Loan Amount</label>
+            <div class="input-prefix"><span>₹</span><input type="number" id="loans" placeholder="e.g. 500000" min="0"></div>
+          </div>
+          <div class="form-group">
+            <label for="dependents">Number of Financial Dependents</label>
+            <select id="dependents">
+              <option value="0">0 — No dependents</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4+</option>
+            </select>
+          </div>
+          <button type="submit" class="calc-btn">Calculate My Financial Health Score →</button>
+          <p style="font-size:0.78rem;color:var(--gray-400);margin-top:12px;text-align:center;">🔒 All data stays in your browser. Nothing is sent or saved.</p>
+        </form>
+      </div>
+
+      <!-- RESULTS -->
+      <div class="calc-results">
+        <h3 style="margin-bottom:24px;">Your Score Results</h3>
+
+        <!-- Placeholder -->
+        <div id="placeholderState" class="placeholder-state">
+          <div style="font-size:4rem;margin-bottom:16px;">📊</div>
+          <p>Fill in your details on the left and click <strong>Calculate</strong> to see your Financial Health Score.</p>
+        </div>
+
+        <!-- Results box -->
+        <div id="resultsBox" style="display:none;">
+          <div class="result-score-wrap">
+            <div class="result-ring">
+              <svg width="180" height="180" viewBox="0 0 180 180">
+                <circle fill="none" stroke="var(--gray-100)" stroke-width="14" cx="90" cy="90" r="70"/>
+                <circle id="ringFill" fill="none" stroke="var(--green)" stroke-width="14" stroke-linecap="round" cx="90" cy="90" r="70" style="stroke-dasharray:440;stroke-dashoffset:440;transition:stroke-dashoffset 1.2s ease;"/>
+              </svg>
+              <div class="score-center">
+                <div class="result-score-num" id="scoreNum">—</div>
+                <div style="font-size:0.72rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.07em;">out of 100</div>
+              </div>
+            </div>
+            <div class="result-risk-label" id="riskLabel">—</div>
+          </div>
+
+          <div class="metrics-list">
+            <div class="metric-row">
+              <div>
+                <div class="metric-name">Emergency Fund Coverage</div>
+                <div class="progress-bar"><div class="progress-fill" id="barEF" style="width:0%"></div></div>
+              </div>
+              <div class="metric-val" id="metricEF">—</div>
+            </div>
+            <div class="metric-row">
+              <div>
+                <div class="metric-name">Debt-to-Income Ratio</div>
+                <div class="progress-bar"><div class="progress-fill" id="barDTI" style="width:0%"></div></div>
+              </div>
+              <div class="metric-val" id="metricDTI">—</div>
+            </div>
+            <div class="metric-row">
+              <div>
+                <div class="metric-name">EMI Burden (% of income)</div>
+                <div class="progress-bar"><div class="progress-fill" id="barEMI" style="width:0%"></div></div>
+              </div>
+              <div class="metric-val" id="metricEMI">—</div>
+            </div>
+            <div class="metric-row">
+              <div>
+                <div class="metric-name">Expense Ratio</div>
+                <div class="progress-bar"><div class="progress-fill" id="barExp" style="width:0%"></div></div>
+              </div>
+              <div class="metric-val" id="metricExp">—</div>
+            </div>
+          </div>
+
+          <div class="suggestions">
+            <h4>Personalised Recommendations</h4>
+            <div id="suggestionsList"></div>
+          </div>
+
+          <div style="margin-top:24px;padding:16px;background:var(--off-white);border-radius:8px;font-size:0.82rem;color:var(--gray-400);">
+            📄 <strong>Download Report</strong> — Coming soon. You'll be able to save a PDF summary of your score.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPLAINER CONTENT -->
+<section class="section" style="background:var(--white);">
+  <div class="container" style="max-width:760px;">
+    <h2>What Is a Financial Health Score?</h2>
+    <p>A Financial Health Score is a single number — between 0 and 100 — that summarises how well you are managing your personal finances. It's calculated from six key metrics that financial experts use to evaluate individual financial stability.</p>
+    <p>Think of it like a credit score, but instead of measuring your creditworthiness to a bank, it measures your overall financial resilience and risk level. A higher score means you're better protected against financial shocks like job loss, medical emergencies, or sudden expenses.</p>
+
+    <h3 style="margin-top:2rem;">How Is the Score Calculated?</h3>
+    <p>Our algorithm evaluates six dimensions of your personal finance:</p>
+    <ul style="padding-left:24px;color:var(--gray-600);margin-bottom:1.2rem;">
+      <li><strong>Expense Ratio</strong> — What percentage of your income goes to regular expenses?</li>
+      <li><strong>EMI Burden</strong> — What share of your income is committed to loan repayments?</li>
+      <li><strong>Emergency Fund Coverage</strong> — How many months of expenses can your savings cover?</li>
+      <li><strong>Debt-to-Income Ratio</strong> — How does your total debt compare to your annual income?</li>
+      <li><strong>Savings Surplus</strong> — Are you consistently saving a healthy percentage of income?</li>
+      <li><strong>Dependent Load</strong> — How many people rely on your income?</li>
+    </ul>
+
+    <h3 style="margin-top:2rem;">Score Interpretation</h3>
+    <ul style="padding-left:24px;color:var(--gray-600);margin-bottom:1.2rem;">
+      <li><strong>70–100 (Low Risk)</strong> — Strong financial position. Continue building wealth.</li>
+      <li><strong>40–69 (Moderate Risk)</strong> — Some vulnerabilities exist. Action recommended.</li>
+      <li><strong>0–39 (High Risk)</strong> — Significant financial stress. Immediate changes needed.</li>
+    </ul>
+
+    <h3 style="margin-top:2rem;">India-Specific Benchmarks</h3>
+    <p>Unlike generic Western financial tools, our scoring uses benchmarks calibrated for Indian realities — including average income levels, inflation patterns, typical loan structures (home loans with longer tenures), and the unique role of family financial dependencies in Indian households.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" style="background:var(--off-white);">
+  <div class="container">
+    <div class="section-header"><h2>Frequently Asked Questions</h2></div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">What is a good Financial Health Score? <span class="faq-arrow">▾</span></button>
+        <div class="faq-a">A score of 70 and above is considered Low Risk, indicating a healthy financial position. Scores between 40–69 indicate Moderate Risk, meaning some areas need improvement. Anything below 40 is High Risk and requires immediate attention.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Is my data safe? Do you store it? <span class="faq-arrow">▾</span></button>
+        <div class="faq-a">100% safe. All calculations happen entirely within your web browser using JavaScript. No data is transmitted to any server. We do not store, collect, or share any of the financial information you enter.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How often should I check my score? <span class="faq-arrow">▾</span></button>
+        <div class="faq-a">We recommend checking your score once every 3 months, or whenever you experience a significant financial change — such as a salary hike, new loan, job change, or a major expense.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Does this affect my credit score? <span class="faq-arrow">▾</span></button>
+        <div class="faq-a">No, absolutely not. This is a completely private, offline calculator. It has no connection to any credit bureau (CIBIL, Equifax, etc.) and does not pull or affect your credit report in any way.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What should I do if my score is low? <span class="faq-arrow">▾</span></button>
+        <div class="faq-a">Look at the personalised recommendations provided with your score. Common first steps include building an emergency fund, reducing discretionary expenses, and avoiding new loans until your EMI burden is under 30% of income. Read our blog for detailed action guides.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="nav-logo" style="color:white;"><div class="logo-icon"><span>₹</span></div>Financial Health Score</div>
+      <p>Free India-focused financial health calculators. No sign-up required.</p>
+    </div>
+    <div class="footer-col"><h5>Calculators</h5><a href="calculator.html">Health Score</a><a href="emi-calculator.html">EMI</a><a href="sip-calculator.html">SIP</a><a href="emergency-fund.html">Emergency Fund</a></div>
+    <div class="footer-col"><h5>Company</h5><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a><a href="disclaimer.html">Disclaimer</a></div>
+    <div class="footer-col"><h5>Blog</h5><a href="../blog/index.html">All Articles</a><a href="../blog/emergency-fund-guide.html">Emergency Fund</a><a href="../blog/emi-warning-signs.html">EMI Guide</a></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 Financial Health Score. Not financial advice. <a href="disclaimer.html" style="color:rgba(255,255,255,0.4);">See Disclaimer</a></p></div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

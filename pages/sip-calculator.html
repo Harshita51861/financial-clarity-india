@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIP Calculator India — Mutual Fund Return Calculator Free</title>
+  <meta name="description" content="Calculate SIP returns for mutual fund investments. See how your monthly SIP grows over 5, 10, or 20 years. Free India SIP calculator with realistic return estimates.">
+  <link rel="canonical" href="https://financialhealthscore.in/pages/sip-calculator.html">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="mobile-nav"><button class="mobile-close">✕</button><a href="../index.html">Home</a><a href="calculator.html">Score Calculator</a><a href="emi-calculator.html">EMI</a><a href="sip-calculator.html">SIP</a><a href="../blog/index.html">Blog</a></div>
+<nav>
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo"><div class="logo-icon"><span>₹</span></div>Financial Health Score</a>
+    <div class="nav-links"><a href="../index.html">Home</a><a href="calculator.html">Health Score</a><a href="emi-calculator.html">EMI</a><a href="emergency-fund.html">Emergency Fund</a><a href="../blog/index.html">Blog</a><a href="calculator.html" class="nav-cta">My Score</a></div>
+    <button class="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="../index.html">Home</a> / SIP Calculator</div>
+    <h1>SIP Calculator</h1>
+    <p>Find out how your systematic investment plan (SIP) grows into wealth over time with the power of compounding.</p>
+  </div>
+</section>
+
+<section class="calc-page">
+  <div class="container">
+    <div class="calc-wrap">
+      <div class="calc-form">
+        <h3 style="margin-bottom:24px;">SIP Details</h3>
+        <form id="sipForm" novalidate>
+          <div class="form-group">
+            <label for="sipMonthly">Monthly SIP Amount</label>
+            <div class="input-prefix"><span>₹</span><input type="number" id="sipMonthly" placeholder="e.g. 5000" min="500" required></div>
+          </div>
+          <div class="form-group">
+            <label for="sipRate">Expected Annual Return Rate (%)</label>
+            <input type="number" id="sipRate" placeholder="e.g. 12" min="1" max="30" step="0.5" value="12" required>
+            <div style="font-size:0.78rem;color:var(--gray-400);margin-top:4px;">Nifty 50 historical average ≈ 12–14%. Use 10–12% for conservative estimate.</div>
+          </div>
+          <div class="form-group">
+            <label for="sipYears">Investment Duration (Years)</label>
+            <input type="number" id="sipYears" placeholder="e.g. 15" min="1" max="40" required>
+          </div>
+          <button type="submit" class="calc-btn">Calculate SIP Returns →</button>
+        </form>
+        <div style="margin-top:20px;padding:16px;background:var(--off-white);border-radius:8px;">
+          <p style="font-size:0.82rem;color:var(--gray-500);margin:0;">⚠️ Returns shown are estimated. Mutual fund investments are subject to market risk. Past performance does not guarantee future returns.</p>
+        </div>
+      </div>
+      <div class="calc-results">
+        <h3 style="margin-bottom:24px;">Your SIP Projection</h3>
+        <div id="sipResult" class="metrics-list" style="display:none;"></div>
+        <div id="sipPlaceholder" class="placeholder-state"><div style="font-size:4rem;">📈</div><p>Enter your SIP details to see how your investment grows over time.</p></div>
+        <div style="margin-top:28px;padding:20px;background:var(--off-white);border-radius:12px;">
+          <h4 style="color:var(--navy);margin-bottom:12px;">Does your SIP fit into your budget?</h4>
+          <p style="font-size:0.88rem;margin-bottom:12px;">Check if your SIP contribution is impacting your overall financial health.</p>
+          <a href="calculator.html" class="btn btn-primary" style="font-size:0.9rem;padding:10px 20px;">Check Financial Health Score →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--white);">
+  <div class="container" style="max-width:760px;">
+    <h2>Why SIP Is the Best Wealth-Building Tool for India's Middle Class</h2>
+    <p>Systematic Investment Plans (SIPs) allow you to invest a fixed amount in a mutual fund at regular intervals — typically monthly. This approach removes the need to time the market and builds the discipline of regular investing, making it ideal for salaried individuals in India.</p>
+    <h3 style="margin-top:2rem;">The Power of Compounding</h3>
+    <p>The magic of SIP lies in compounding. When your returns generate their own returns, the growth becomes exponential over time. A monthly SIP of just ₹5,000 at 12% annual return over 20 years can grow to over ₹49 lakhs — while you've only invested ₹12 lakhs. The remaining ₹37+ lakhs is pure compounding wealth.</p>
+    <h3 style="margin-top:2rem;">How Much Should You SIP?</h3>
+    <p>A common rule of thumb is to invest at least 20% of your monthly income via SIP or other savings instruments. If you earn ₹60,000 per month, aim to invest at least ₹12,000 monthly. Even starting with ₹1,000–₹2,000 and increasing annually is far better than waiting to invest a large amount.</p>
+    <h3 style="margin-top:2rem;">Realistic Return Expectations</h3>
+    <ul style="padding-left:24px;color:var(--gray-600);">
+      <li>Conservative (Debt Funds): 6–8% annual returns</li>
+      <li>Moderate (Balanced/Hybrid Funds): 9–11% annual returns</li>
+      <li>Aggressive (Equity/Index Funds): 12–15% annual returns</li>
+    </ul>
+  </div>
+</section>
+
+<section class="faq-section" style="background:var(--off-white);">
+  <div class="container">
+    <div class="section-header"><h2>SIP Calculator FAQs</h2></div>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q">Can I stop my SIP anytime? <span class="faq-arrow">▾</span></button><div class="faq-a">Yes, most SIPs can be paused or stopped anytime without penalty. However, stopping early significantly reduces your wealth creation potential. It's better to reduce the SIP amount rather than stop entirely during financial difficulty.</div></div>
+      <div class="faq-item"><button class="faq-q">Is SIP investment tax-free? <span class="faq-arrow">▾</span></button><div class="faq-a">ELSS (Equity Linked Savings Scheme) SIPs qualify for tax deduction under Section 80C up to ₹1.5 lakhs per year. Long-term capital gains (LTCG) on equity mutual fund SIPs above ₹1 lakh are taxed at 10%. Debt fund gains are taxed as per your income tax slab.</div></div>
+      <div class="faq-item"><button class="faq-q">What is the minimum SIP amount? <span class="faq-arrow">▾</span></button><div class="faq-a">Most mutual funds in India allow SIPs starting from ₹500 per month. Some funds allow even ₹100 per month. The key is to start early and increase the amount as your income grows.</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand"><div class="nav-logo" style="color:white;"><div class="logo-icon"><span>₹</span></div>Financial Health Score</div><p>Free India-focused financial calculators.</p></div>
+    <div class="footer-col"><h5>Calculators</h5><a href="calculator.html">Health Score</a><a href="emi-calculator.html">EMI</a><a href="sip-calculator.html">SIP</a><a href="emergency-fund.html">Emergency Fund</a></div>
+    <div class="footer-col"><h5>Company</h5><a href="about.html">About</a><a href="privacy.html">Privacy</a><a href="disclaimer.html">Disclaimer</a></div>
+    <div class="footer-col"><h5>Learn</h5><a href="../blog/index.html">Blog</a></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 Financial Health Score. Mutual fund investments subject to market risk.</p></div>
+</footer>
+<script src="../js/main.js"></script>
+<script>
+  document.getElementById('sipForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    document.getElementById('sipPlaceholder').style.display = 'none';
+    document.getElementById('sipResult').style.display = 'flex';
+  });
+</script>
+</body>
+</html>
